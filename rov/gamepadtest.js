@@ -63,12 +63,11 @@ function removegamepad(gamepad) {
 
 
 function sendData(a, b){
-        let R =   Math.round( (a+1)*100 );
-        let G = Math.round( (b+1)*100 );
+
 	let blue = 0;
 
-	var red=parseFloat(a).toFixed(2); //"12.13"
-	var green=parseFloat(b).toFixed(2); //"12.13"
+	var red=parseFloat(a); //"12.13"
+	var green=parseFloat(b); //"12.13"
 
         let queryBuilder = `red=${red}&green=${green}&blue=${blue}`;
 
@@ -119,7 +118,7 @@ function updateStatus() {
     var axes = d.getElementsByClassName("axis");
     for (var i=0; i<controller.axes.length; i++) {
       var a = axes[i];
-      a.innerHTML = i + ": " + controller.axes[i].toFixed(4);
+      a.innerHTML = i + ": " + controller.axes[i];
       a.setAttribute("value", controller.axes[i]);
     }
   }
