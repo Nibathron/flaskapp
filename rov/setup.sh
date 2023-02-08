@@ -46,15 +46,7 @@ sudo apt install -y libapache2-mod-wsgi-py3
 
 #sudo apt-get install -y python-is-python3
 
-# TODO investigate a bit regarding the pigpio https://abyz.me.uk/rpi/pigpio/download.html
-
-sudo apt install -y pigpio
-sudo apt install -y python3-pigpio
-
-# Auto-/start the pigpio daemon
-sudo systemctl enable pigpiod
-sudo systemctl start pigpiod 
-
+pip install pyserial
 sudo pip3 install flask
 
 # TODO: Check what/why
@@ -80,8 +72,6 @@ sudo cp rov.wsgi /var/www/html/rov/
 
 sudo chown -R pi:pi /var/www/html
 
-# Start the pigpio daemon (Also added to crontab in the end)
-#sudo pigpiod
 
 #sudo a2dissite apache-rov.conf
 sudo a2dissite 000-default.conf
@@ -106,6 +96,5 @@ sudo systemctl reload apache2
 # For testing, delete the cronab for user pi with :
 #  crontab -r -u pi
 # In the crontab add
-# @reboot sudo pigpiod
 
 #cat <(crontab -l 2>/dev/null) <(echo "@reboot sudo pigpiod") | crontab -
