@@ -189,7 +189,7 @@ def led():
         #if l==1 or r==1:
         #test=("%s,%s,s\n" % (str(int(right * 300)), str(int(left * 300))))
         test=("%s,%s,s\n" % (str(int(right * 255)), str(int(left * 255))))
-        #app.logger.info(test)
+        app.logger.info(test)
         ser.write(test.encode())
             #l=0
             #r=0
