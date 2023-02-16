@@ -17,16 +17,6 @@ wget https://raw.githubusercontent.com/Nibathron/flaskapp/main/rov/setup.sh && c
 # Ted Mielczarek https://github.com/luser/gamepadtest.git
 # Nazmus Nasir https://github.com/naztronaut/RaspberryPi-RGBW-Control
 
-: '
-```
-  Function        GPIO    40-Pin header
- ---------------------------------------
-  Right Forward    24        18  
-  Right Reverse    25        22
-  Left Forward     20        38
-  Left Reverse     18        12
-```
-'
 
 
 sudo apt update
